@@ -1,0 +1,40 @@
+.cards-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 60%;
+}
+
+.card-mem-c{
+    border:1px solid blue;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.card-mem {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card-mem img {
+    width: 150px!important;
+    height: 150px!important;
+    object-fit: cover;
+    
+}
+
+.hide-back-card {
+    filter: opacity(0);
+    transition: 0.5s ease-in-out;
+}
+
+
+
+.card-mem--back{
+    transition: 0.5s ease-in-out
+}

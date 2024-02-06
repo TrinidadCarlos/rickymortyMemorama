@@ -1,0 +1,29 @@
+.spin-container {   
+    text-align: center;
+    color:#ffffff!important;
+    font-size: 25px;
+}
+
+.spin {
+    display: block;
+    width: 150px;
+    height: 150px;
+    animation: spinn-key-frame 2s linear infinite;
+}
+
+.just-spin {
+    animation: spinn-key-frame 2s linear infinite;
+}
+
+
+@keyframes spinn-key-frame {
+    0% {
+      rotate: 0deg;
+    }
+    50% {
+        rotate: 180deg ;
+    }
+    100% {
+        rotate: 360deg;
+    }
+  }

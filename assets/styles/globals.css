@@ -1,0 +1,24 @@
+* {
+    font-family: 'Playfair Display', serif;
+}
+
+
+body{
+    background-color: #000000!important;
+    background: url('../img/bg-1.png') no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.d-none {
+    display: none;
+}
+
+.f-18 {
+    font-size: 18px;
+}
+
+.zIndex-conffeti {
+    position: relative;
+    z-index: 10000;
+}
