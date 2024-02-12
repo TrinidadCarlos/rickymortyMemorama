@@ -2,16 +2,34 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    max-width: 60%;
+    gap: 20px;
+    max-width: 90%;
+    padding-bottom: 15px;
+    max-height: calc(100vh - 100px);
+    overflow-y:auto ;
+}
+
+@media screen and (min-width: 800px ) {
+    .cards-container {
+        max-width: 90%; 
+    }
 }
 
 .card-mem-c{
-    border:1px solid blue;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    border:1px solid #8bc440;
+    width: 130px;
+    height: 130px;
+    border-radius: 34px;
     overflow: hidden;
     position: relative;
+    box-shadow: 0 0 10px 5px #8bc440;
+}
+
+@media screen and (min-width: 600px) {
+    .card-mem-c{
+        width: 150px;
+        height: 150px;
+    }
 }
 
 
@@ -22,14 +40,26 @@
 }
 
 .card-mem img {
-    width: 150px!important;
-    height: 150px!important;
+    width: 130px; /* !important; */
+    height: 130px; /* !important; */
     object-fit: cover;
     
 }
 
+@media screen and (min-width: 600px) {
+    .card-mem img{
+        width: 150px; /* !important; */
+        height: 150px; /* !important; */
+    }
+}
+
 .hide-back-card {
-    filter: opacity(0);
+    filter: opacity(0)!important;
+    transition: 0.5s ease-in-out;
+}
+
+.show-back-card {
+    filter: opacity(1);
     transition: 0.5s ease-in-out;
 }
 

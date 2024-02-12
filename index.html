@@ -22,8 +22,8 @@
     <!-- sweetalert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
-    <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/3491dfb8fd.js" crossorigin="anonymous"></script>
+    <!-- AQUI TU LINK (KIT ) DE FONTAWESOME -->
+    
 
     <!-- bootstrap -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -39,7 +39,7 @@
     
     <script src="./assets/js/index.js" type="module" ></script>
     
-    <title>Document</title>
+    <title>Rick&Morty</title>
 </head>
 <body>
     
@@ -52,12 +52,10 @@
 
     
     <header class="header p-2 rounded mt-2 mx-auto d-none" id="headerGame">
-      <div class="d-flex justify-content-around ">
-          <p class="mb-1 font-weight-bold f-18 text-white">Intentos: <span> 5 </span> </p>
-          <p class="mb-1 font-weight-bold f-18 text-white">Contador: <span> 5 </span> </p>
+      <div class="d-flex">
+          <p class="mb-1 mr-3 font-weight-bold f-20 text-white">Intentos: <span id="attemptsId"> 0 </span> </p>
       </div>
-      <div class="text-center mt-2">
-          <button class="btn btn-dark">Jugar de nuevo <i class="fas fa-gamepad text-white ml-2"  ></i> </button>
+      <div class="mt-2">
           <button class="d-none" id="startGame"></button>
       </div>
     </header>
@@ -85,7 +83,7 @@
         
 
     </main>
-    
+
 </body>
     
 </html>

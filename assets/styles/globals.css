@@ -18,6 +18,10 @@ body{
     font-size: 18px;
 }
 
+.f-20{
+    font-size: 20px;
+}
+
 .zIndex-conffeti {
     position: relative;
     z-index: 10000;

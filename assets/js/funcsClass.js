@@ -60,21 +60,14 @@ class Funcs {
     makeConfetti(props = {}){
         // esta funcón se ejecuta al iniciar la app... para poder agregar la clase z-index
         const fc = new Funcs();
-        let values = props;
-        const defaultValues = {
-            particleCount: 100,
-            spread: 70,
-            originY: 0,
-            startVelocity: 30,
+        
+        const assignValues = {
+            particleCount: fc.isNil(props?.particleCount) === false ? props.particleCount : 100,
+            spread: fc.isNil(props?.spread) === false ? props.spread : 70,
+            originY: fc.isNil(props?.originY) === false ? props.originY : 0,
+            startVelocity: fc.isNil(props?.startVelocity) === false ? props.startVelocity : 30,
+            angle: fc.isNil(props?.angle) === false ? props.angle : 90,
         };
-       
-        // asigna valores
-        if(
-            fc.isNil(props) === true|| 
-            (fc.isNil(props) === false && fc.isEmptyArr(Object.values(props)) === true ) 
-        ){
-            values = defaultValues;
-        }
 
         const canvasConfetti = fc.getById('confetti');
         if (canvasConfetti.classList.contains('zIndex-conffeti') === false ) {
@@ -82,10 +75,11 @@ class Funcs {
         }
         
             confetti({
-                particleCount: values.particleCount,
-                spread: values.spread,
-                origin: { y: values.originY },
-                startVelocity: values.startVelocity
+                particleCount: assignValues.particleCount,
+                spread: assignValues.spread,
+                origin: { y: assignValues.originY },
+                startVelocity: assignValues.startVelocity,
+                angle: assignValues.angle
             });
 
     } 
@@ -98,6 +92,7 @@ class Funcs {
         } else {
             return false;
         }
+
     }
 
     generateRandomIds (idsQty = 0) {
@@ -112,6 +107,10 @@ class Funcs {
         return idsArr;
     }
 
+    randomInRange(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+
     createElementHtml (data = {})  {
         const element = document.createElement(data.element);
         data.att.forEach(a => {
@@ -120,20 +119,6 @@ class Funcs {
     
         return element;
     }
-
-
-    addCardSelected (cards = []) {
-        let equals = false;
-
-        setTimeout(() => {
-             equals = cards[0] === cards[1];
-
-        },1000);
-
-            return equals;
-    }   
-
-
 
 }
 
